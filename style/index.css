@@ -175,7 +175,7 @@ body {
   font-family: Helvetica, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", "YouYuan", "幼圆", serif;
   background-color: #fff7e7;
   color: #ccc;
-  font-size: 1.5em;
+  font-size: 18px;
 }
 a {
   text-decoration: none;
@@ -197,27 +197,37 @@ a {
   box-shadow: 0px 0px 10px 0px #ccc;
 }
 .title {
-  color: #36d7f6;
+  border-radius: 3px!important;
+  background-color: #00ff88;
+  color: #ffffff;
   font-size: 1.3em;
   font-weight: bold;
+  padding: 0.3em !important;
 }
 .strong1 {
-  color: #36d7f6;
+  background-color: #ff0062;
+  color: #ffffff;
+  padding: 0.3em !important;
 }
 .strong2 {
-  color: #36d7f6;
+  background-color: #36d7f6;
+  color: #ffffff;
+  padding: 0.2em;
 }
 .strong3 {
-  color: #4fd9f4;
+  color: #000000;
+  font-size: 21px;
 }
 .strong4 {
-  color: #070707;
+  color: #435755;
+  font-size: 18px;
 }
 .strong5 {
   color: #ff0062;
 }
 .strong6 {
-  color: #dd806e;
+  color: #242323;
+  font-size: 19px;
 }
 .strong7 {
   color: #fff4de;
@@ -270,12 +280,15 @@ a {
   color: #000000;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
+  font-size: 19px;
 }
 .link:hover {
   color: #a3a3a3;
 }
 .link2 {
-  color: #4fd9f4;
+  background-color: #c2fe38;
+  color: #ffffff;
+  padding: 0.1em;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
@@ -304,7 +317,6 @@ section .inline-wrapper {
 section .inline-wrapper span {
   padding: 0.4em 0;
   display: inline-block;
-  border-radius: 7px;
   -webkit-transition: all 0.5s;
           transition: all 0.5s;
 }
@@ -356,6 +368,7 @@ section .inline-wrapper span {
   *zoom: 1;
 }
 .chart .chart-wra {
+  position: relative;
   float: left;
   width: 25%;
   display: block;
@@ -367,9 +380,14 @@ section .inline-wrapper span {
   margin: 0 auto;
 }
 .chart .chart-wra span {
-  display: inline-block;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
+  position: absolute;
   width: 100%;
   font-size: 1.2em;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
 }
 .chart .closeWra {

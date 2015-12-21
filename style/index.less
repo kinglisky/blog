@@ -28,7 +28,7 @@ body {
 	//	background-color: rgb(36, 36, 36);
 	background-color: rgb(255, 247, 231);
 	color: #ccc;
-	font-size: 1.5em;
+	font-size: 18px;
 	//	word-spacing:0.8em;
 }
 
@@ -60,26 +60,36 @@ a {
 }
 
 .title {
-	color: rgb(54, 215, 246);
+	border-radius: 3px!important;
+	background-color: rgb(0, 255, 136);
+	color: rgb(255, 255, 255);
 	font-size: 1.3em;
 	font-weight: bold;
+	padding:0.3em !important;
 }
 
 .strong1 {
-	color: rgb(54, 215, 246);
+	background-color: rgb(255, 0, 98);
+	color: rgb(255, 255, 255);
+	padding: 0.3em !important;
 }
 
 .strong2 {
-	color: rgb(54, 215, 246);
+	background-color:  rgb(54, 215, 246);
+	color: rgb(255, 255, 255);
+	padding: 0.2em;
 }
 
 .strong3 {
-	color: rgb(79, 217, 244);
+	color: rgb(0, 0, 0);
+	font-size: 21px;
 }
 
 .strong4 {
 	//	color:rgb(96,222,237);
-	color: rgb(7, 7, 7);
+	color: rgb(67, 87, 85);
+	font-size: 18px;
+
 }
 
 .strong5 {
@@ -87,7 +97,8 @@ a {
 }
 
 .strong6 {
-	color: rgb(221, 128, 110);
+	color: rgb(36, 35, 35);
+	font-size: 19px;
 }
 
 .strong7 {
@@ -150,13 +161,16 @@ a {
 .link {
 	color: rgb(0, 0, 0);
 	transition: all 0.3s;
+	font-size: 19px;
 	&:hover {
 		color: rgb(163, 163, 163);
 	}
 }
 
 .link2 {
-	color: rgb(79, 217, 244);
+	background-color:  rgb(194, 254, 56);
+	color: rgb(255, 255, 255);
+	padding: 0.1em;
 	transition: all 0.3s;
 	&:hover {
 		color: rgb(110, 216, 237);
@@ -186,7 +200,6 @@ section {
 		span {
 			padding: 0.4em 0;
 			display: inline-block;
-			border-radius: 7px;
 			transition: all 0.5s;
 		}
 	}
@@ -242,6 +255,7 @@ section {
 	box-shadow: 10px 10px 20px 0 #000;
 	.clearfix;
 	.chart-wra {
+		position: relative;
 		float: left;
 		width: 25%;
 		display: block;
@@ -252,9 +266,15 @@ section {
 			margin: 0 auto;
 		}
 		span {
-			display: inline-block;
+			left: 0;
+			top: 50%;
+			margin-top: -25px;
+			position: absolute;
 			width: 100%;
 			font-size: 1.2em;
+			height: 50px;
+			line-height: 50px;
+
 			text-align: center;
 		}
 	}
@@ -271,7 +291,4 @@ section {
 		color: rgb(255, 0, 98);
 		cursor: pointer;
 	}
-}
-
-#code-chart {
 }

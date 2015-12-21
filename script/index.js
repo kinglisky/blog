@@ -21,9 +21,9 @@ $(document).ready(function () {
 				percentage: 0,
 				speed: 10,
 				fontFamily: 'Georgia',
-				fontColor: '#ded7d7',
+				fontColor: '#3e3c3c',
 				lineColor: 'rgb(167, 236, 33)',
-				lineWidth: 4,
+				lineWidth: 3,
 				remainingLineColor: 'rgba(21, 143, 208, 0.1)'
 			},
 			code: [{
