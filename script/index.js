@@ -14,7 +14,7 @@ $(document).ready(function () {
 		DEFULT: {
 			isFrist: true,
 			offsetX: 390,
-			offsetY: 26
+			offsetY: 10
 		},
 		CHARTSET: {
 			base: {
