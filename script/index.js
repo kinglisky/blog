@@ -11,6 +11,9 @@ $(document).ready(function () {
 			$designCharts: $('#design-chart .chart-wra canvas'),
 			$toolsCharts: $('#tools-chart .chart-wra canvas')
 		},
+		USE: {
+			currPanle: null
+		},
 		DEFULT: {
 			isFrist: true,
 			offsetX: 390,
@@ -21,7 +24,7 @@ $(document).ready(function () {
 				percentage: 0,
 				speed: 10,
 				fontFamily: 'Georgia',
-				fontColor: '#3e3c3c',
+				fontColor: '#FFF',
 				lineColor: 'rgb(167, 236, 33)',
 				lineWidth: 3,
 				remainingLineColor: 'rgba(21, 143, 208, 0.1)'
@@ -43,11 +46,11 @@ $(document).ready(function () {
 			},
 				{
 					percentage: 68,
-					lineColor:'rgb(255,255,0)'
+					lineColor: 'rgb(255,255,0)'
 			}
 			, {
 					percentage: 80,
-					lineColor:  'rgb(54, 215, 246)'
+					lineColor: 'rgb(54, 215, 246)'
 			},
 				{
 					percentage: 67,
@@ -103,9 +106,9 @@ $(document).ready(function () {
 	}
 
 	ME.METHODS.buildSkillChart = function (baset, data, $list) {
-			var set={};
+			var set = {};
 			$list.each(function (i, item) {
-				set=$.extend({},baset,data[i]);
+				set = $.extend({}, baset, data[i]);
 				$(item).ClassyLoader(set);
 			});
 		}
@@ -139,7 +142,9 @@ $(document).ready(function () {
 			ME.DEFULT.isFrist = false;
 		}
 		ME.DOM.$logoWra.fadeToggle('slow');
-	});
+	}).on('mouseleave', function (event) {
+		ME.DOM.$logoWra.fadeOut('slow');
+	})
 
 	// 关闭个人技能列表
 	ME.DOM.$closeChartBtn.on('click', function (event) {
@@ -148,6 +153,7 @@ $(document).ready(function () {
 			top: '-100%',
 			opacity: 0
 		}, 'slow', 'swing');
+		ME.USE.currPanle = null;
 	});
 
 	// 打开个人技能列表
@@ -157,7 +163,13 @@ $(document).ready(function () {
 			$dest = null,
 			top = 0;
 		if (!destId) return console.log('not found id');
-		$dest = $(destId);
+		if (ME.USE.currPanle) {
+			ME.USE.currPanle.animate({
+				top: '-100%',
+				opacity: 0
+			}, 'slow', 'swing');
+		}
+		ME.USE.currPanle = $dest = $(destId);
 		$dest.css({
 			marginTop: -($dest.height() / 2) | 0
 		}).animate({
